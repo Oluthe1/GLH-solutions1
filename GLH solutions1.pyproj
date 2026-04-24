@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>6a13402a-d6a3-46ce-ba8c-a65435bf083e</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <ProjectTypeGuids>{789894c7-04a9-4a11-a6b5-3f4435165112};{1b580a1a-fdb3-4b32-83e1-6407eb2722e6};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <StartupFile>runserver.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <LaunchProvider>Web launcher</LaunchProvider>
+    <WebBrowserUrl>http://localhost</WebBrowserUrl>
+    <OutputPath>.</OutputPath>
+    <SuppressCollectPythonCloudServiceFiles>true</SuppressCollectPythonCloudServiceFiles>
+    <Name>GLH solutions1</Name>
+    <RootNamespace>GLH solutions1</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="GLH_solutions1\contact.py" />
+    <Compile Include="GLH_solutions1\templates\login.html" />
+    <Compile Include="runserver.py" />
+    <Compile Include="GLH_solutions1\__init__.py" />
+    <Compile Include="GLH_solutions1\views.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="GLH_solutions1\" />
+    <Folder Include="GLH_solutions1\static\" />
+    <Folder Include="GLH_solutions1\static\content\" />
+    <Folder Include="GLH_solutions1\static\fonts\" />
+    <Folder Include="GLH_solutions1\static\scripts\" />
+    <Folder Include="GLH_solutions1\templates\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="GLH_solutions1\static\apple.jpg" />
+    <Content Include="GLH_solutions1\static\banana.jpg" />
+    <Content Include="GLH_solutions1\static\content\about.css" />
+    <Content Include="GLH_solutions1\static\content\aspara.webp" />
+    <Content Include="GLH_solutions1\static\content\count.css" />
+    <Content Include="GLH_solutions1\static\content\economy.jpg" />
+    <Content Include="GLH_solutions1\static\content\environment.png" />
+    <Content Include="GLH_solutions1\static\content\femfar.jpg" />
+    <Content Include="GLH_solutions1\static\content\hands.jpg" />
+    <Content Include="GLH_solutions1\static\content\hero.jpg" />
+    <Content Include="GLH_solutions1\static\content\high-resolution-color-logo %281%29.png" />
+    <Content Include="GLH_solutions1\static\content\high-resolution-color-logo.png" />
+    <Content Include="GLH_solutions1\static\content\highres.png" />
+    <Content Include="GLH_solutions1\static\content\indi.css" />
+    <Content Include="GLH_solutions1\static\content\malfar.jpg" />
+    <Content Include="GLH_solutions1\static\content\regist.css" />
+    <Content Include="GLH_solutions1\static\content\team.jpg" />
+    <Content Include="GLH_solutions1\static\content\Untitled.png" />
+    <Content Include="GLH_solutions1\static\crab.jpg" />
+    <Content Include="GLH_solutions1\static\eggs.jpg" />
+    <Content Include="GLH_solutions1\static\mackarel.jpg" />
+    <Content Include="GLH_solutions1\static\milk.jpg" />
+    <Content Include="GLH_solutions1\static\prawn.jpg" />
+    <Content Include="GLH_solutions1\static\watermelon.jpg" />
+    <Content Include="GLH_solutions1\templates\cart.html" />
+    <Content Include="GLH_solutions1\templates\checkout.html" />
+    <Content Include="GLH_solutions1\templates\product.html" />
+    <Content Include="GLH_solutions1\templates\register.html" />
+    <Content Include="requirements.txt" />
+    <Content Include="GLH_solutions1\static\content\bootstrap.css" />
+    <Content Include="GLH_solutions1\static\content\bootstrap.min.css" />
+    <Content Include="GLH_solutions1\static\content\site.css" />
+    <Content Include="GLH_solutions1\static\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="GLH_solutions1\static\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="GLH_solutions1\static\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="GLH_solutions1\static\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="GLH_solutions1\static\scripts\bootstrap.js" />
+    <Content Include="GLH_solutions1\static\scripts\bootstrap.min.js" />
+    <Content Include="GLH_solutions1\static\scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="GLH_solutions1\static\scripts\jquery-1.10.2.js" />
+    <Content Include="GLH_solutions1\static\scripts\jquery-1.10.2.min.js" />
+    <Content Include="GLH_solutions1\static\scripts\jquery-1.10.2.min.map" />
+    <Content Include="GLH_solutions1\static\scripts\jquery.validate-vsdoc.js" />
+    <Content Include="GLH_solutions1\static\scripts\jquery.validate.js" />
+    <Content Include="GLH_solutions1\static\scripts\jquery.validate.min.js" />
+    <Content Include="GLH_solutions1\static\scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="GLH_solutions1\static\scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="GLH_solutions1\static\scripts\modernizr-2.6.2.js" />
+    <Content Include="GLH_solutions1\static\scripts\respond.js" />
+    <Content Include="GLH_solutions1\static\scripts\respond.min.js" />
+    <Content Include="GLH_solutions1\static\scripts\_references.js" />
+    <Content Include="GLH_solutions1\templates\about.html" />
+    <Content Include="GLH_solutions1\templates\contact.html" />
+    <Content Include="GLH_solutions1\templates\index.html" />
+    <Content Include="GLH_solutions1\templates\layout.html" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Web.targets" />
+  <!-- Specify pre- and post-build commands in the BeforeBuild and 
+       AfterBuild targets below. -->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <AutoAssignPort>True</AutoAssignPort>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

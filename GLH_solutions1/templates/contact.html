@@ -1,0 +1,76 @@
+{% block extra_css %}
+<link rel="stylesheet" href="../static/content/count.css" />
+{% endblock %}
+{% extends "layout.html" %}
+
+{% block content %}
+
+<h2>{{ title }}.</h2>
+<h3>{{ message1 }}</h3>
+{% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    {% for category, message in messages %}
+<div class="alert {{ category }}" style="padding: 10px; margin-bottom: 10px; border: 1px solid;">
+    {{ message }}
+</div>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+
+
+<div class="container">
+    <form action="/contact" method="post">
+        <div class="row">
+            <div class="col-25">
+                <label for="fname">First Name</label>
+            </div>
+            <div class="col-75">
+                <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="lname">Last Name</label>
+            </div>
+            <div class="col-75">
+                <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="phonenum">Phone number</label>
+            </div>
+            <div class="col-75">
+                <input type="tel" id="phonenum" pattern="[0]{1}[7-9]{1}[0-9]{9}" name="phonenumber" placeholder="07700900123" required>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="email">Email</label>
+            </div>
+            <div class="col-75">
+                <input type="email" autocomplete="on" id="email" name="email" placeholder="your@email.com.." required>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="subject">Subject</label>
+            </div>
+            <div class="col-75">
+                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px" required></textarea>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+</div>
+
+
+<address>
+    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
+    <strong>Enquiries to be a producer:</strong> <a href="mailto:BAproducer@example.com">BAproducer@example.com</a>
+</address>
+
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h1>Products Page</h1>
+<p><a href="/cart"> Go to cart </a></p>
+
+{% for product in products %}
+<div class="card" style="width: 18rem;">
+    <h3>{{product.name}}</h3>
+    <img src="{{ url_for('static', filename=product.img)}}" class="card-img-top" alt="{{product.name}}" width="200" height="200" />
+
+    <p></p>
+    <p>{{product.producer}}</p>
+    <p></p>
+    <div class="card-body">
+        <h5 class="card-title">{{product.descr}}</h5>
+        <p class="card-text">&pound;{{product.price}}</p>
+        <p class="card-text">{{product.producer}}</p>
+        <button class="btn btn-primary" onclick="addToCart({{product.id}})" type="button">Add to Cart</button>
+    </div>
+
+    
+</div>
+<hr />
+{% endfor %}
+
+
+
+
+<script>
+        function addToCart(productId) {  
+            fetch(`/cart/add/${productId}`, {
+                method: "POST"
+            })
+            .then(response => response.json())  
+            .then(data => {
+                    alert(data.message);  
+                })
+                .catch(error => console.error("Error:", error));  
+        }
+</script>
+
+{% endblock %}

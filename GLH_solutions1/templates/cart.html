@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h1>This is your cart</h1>
+<p><a href="{{url_for ('product')}}">Back to Products</a></p>
+{% if cart_items %}
+<form action="{{ url_for('clear_cart') }}" method="POST">
+    <button type="submit">Clear Cart</button>
+</form>
+
+<hr />
+
+{% for item in cart_items%}
+<div class="cart-item">
+    <h3>{{item.name}}</h3>
+    <!-- Product image -->
+    <img src="{{ url_for('static', filename=item.img) }}" alt="{{ item.name }}" width="150" height="150">
+
+    <!-- Price for one unit -->
+    <p>Price: &pound;{{ item.price }}</p>
+
+    <!-- Current quantity -->
+    <p>Quantity: {{ item.quantity }}</p>
+
+    <!-- Total for this product -->
+    <p>Subtotal: &pound;{{ item.subtotal }}</p>
+
+    <!-- Increase quantity -->
+    <form action="{{ url_for('increase_quantity', product_id=item.product_id) }}" method="POST" style="display:inline;">
+        <button type="submit">+</button>
+    </form>
+
+    <!-- Decrease quantity -->
+    <form action="{{ url_for('decrease_quantity', product_id=item.product_id) }}" method="POST" style="display:inline;">
+        <button type="submit">-</button>
+    </form>
+
+    <!-- Remove all of this product -->
+    <form action="{{ url_for('remove_all_of_item', product_id=item.product_id) }}" method="POST" style="display:inline;">
+        <button type="submit">Remove All</button>
+    </form>
+</div>
+<hr>
+    {% endfor %}
+
+<h2>Total: &pound;{{ total_price }}</h2>
+
+<a href="{{url_for('checkout')}}" class="btn btn-secondary">Checkout</a>
+    {% else %}
+<p>Your cart is empty.</p>
+    {% endif %}
+{% endblock %}

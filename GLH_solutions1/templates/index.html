@@ -1,0 +1,75 @@
+<!-- Placeholder for child-specific CSS-->
+{% block extra_css %}
+<link rel="stylesheet" href="../static/content/indi.css" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.1.0/mdb.min.css" rel="stylesheet" />
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+{% endblock %}
+
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="hero-image">
+    <div class="hero-text">
+        {% if current_user.is_authenticated %}
+        <p>Welcome back, {{ current_user.username }}!</p>
+        {% else %}
+        {% endif %}
+        <h1>Welcome to the Greenfield Local Hub</h1>
+        <p>Where we are proud to bring farm fresh delicacies to your home</p>
+        <a href="{{url_for('product')}}" class="btn btn-secondary">Check out some of our products</a>
+    </div>
+</div>
+<br />
+<div class="row g-4 justify-content-center">
+    <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100" style="background-color: #76c893; border-color: #76c893;">
+            <img src="../static/content/aspara.webp" class="card-img-top" alt="Asparagus in season" style="width: 100% !important; height: 300px; object-fit: fill; display: block;" />
+            <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Hot in season!</h5>
+                <p class="card-text">New and in season this beautiful Spring time are the asparagus and spinach and they are in stocks and very much available.</p>
+                <a href="{{url_for('product')}}" class="btn btn-secondary">Check them out</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100" style="background-color: #76c893; border-color: #76c893;">
+            <img src="../static/content/femfar.jpg" class="card-img-top" alt="Alice the top notch farmer" style="width: 100% !important; height: 300px; object-fit: fill; display: block;" />
+            <div class="card-body d-flex flex-column">
+                <h5 class="card-title">How she does it</h5>
+                <p class="card-text">The story of Alice and how she produces her delicious and outstanding produce for her customers and has also built quite the fanbase.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100" style="background-color: #76c893; border-color: #76c893;">
+            <img src="../static/content/malfar.jpg" class="card-img-top" alt="Joe Elliott the top producer" style="width: 100% !important; height: 300px; object-fit: fill; display: block;" />
+            <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Well done, Joe</h5>
+                <p class="card-text">Joe Elliott has emerged as the producer with the most products sold in the past month.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100" style="background-color: #76c893; border-color: #76c893;">
+            <img src="../static/content/team.jpg" class="card-img-top" alt="The winning team" />
+            <div class="card-body d-flex flex-column">
+                <h5 class="card-title">What this means to Us</h5>
+                <p class="card-text">The Greenfield Local Hub means everything to all of us here behind the scenes and to know more about us and our story please have a look at our 'About Us' page</p>
+                <a href="{{url_for('about')}}" class="btn btn-secondary">About Us</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100" style="background-color: #76c893; border-color: #76c893;">
+            <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Loved every bite of my produce</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <span class="star" onclick="this.classList.toggle('glow')">&#9733;</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
