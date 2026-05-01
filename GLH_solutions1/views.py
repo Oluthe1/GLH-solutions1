@@ -206,7 +206,7 @@ def order_confirmed():
     cursor.execute("DELETE FROM cart_item")
     conn.commit()
     conn.close()
-    return redirect(url_for("udashboard"))
+    return redirect(url_for("home"))
 
 
 
