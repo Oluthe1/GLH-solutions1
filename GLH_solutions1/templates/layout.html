@@ -106,7 +106,7 @@
                 </ul>
                 <button onclick="myFunction()">Toggle dark mode</button>
                 {% if current_user.is_authenticated %}
-                <a href="{{url_for('udashboard')}}"> {{ current_user.username }} </a>
+                <a href="{{url_for('home')}}"> {{ current_user.username }} </a>
                 <a href="{{url_for('logout')}}" class="btn btn-secondary">Logout</a>
                 {% else %}
 
